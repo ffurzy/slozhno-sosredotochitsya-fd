@@ -1,5 +1,107 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  min-height: 100vh;
+}
+
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  
 }
+
+.header {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: var(--gap);
+  align-items: center;
+  position: relative;
+  /*background-image: var(--background-image);
+  background-size: cover;
+  padding: 0;
+  margin: 0;*/
+}
+
+
+
+.header__theme-menu {
+  justify-self: end;
+  margin-top: 75px;
+  margin-right: 10px;
+}
+
+.header__theme-menu-list {
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--accent-color-transparent);
+} 
+
+
+
+.header__rec {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  color: var(--accent-color);
+}
+
+/*кружок*/
+.header__rec::after { 
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px #FF0070;
+}
+
+/*Уголок*/
+.header__rec::before { 
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-color); 
+  border-right: 1px solid var(--accent-color);
+  top: -3px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+}
+
+.header__title {
+  font-size: var(--heading-font-size);
+  color: var(--header-title-color);
+  text-shadow: var(--shadow-color);
+  line-height: 1;
+  text-align: left;
+  line-height: 95.7px;
+}
+
+.header__description {
+  color: var(--highlight-text-color);
+  background-color: var(--title-decor);
+  font-weight: 700;
+  
+}
+
