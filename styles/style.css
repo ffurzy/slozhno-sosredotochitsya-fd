@@ -1,50 +1,67 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
-
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   min-height: 100vh;
+  max-width: 375px;
+  font-size: var(--main-font-size);
 }
 
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--background-color);
 }
 
 .header {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  padding: var(--gap);
-  align-items: center;
   position: relative;
-  /*background-image: var(--background-image);
-  background-size: cover;
-  padding: 0;
-  margin: 0;*/
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4fr minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+  
+  
+
+  
+  
 }
 
-
-
 .header__theme-menu {
-  justify-self: end;
-  margin-top: 75px;
-  margin-right: 10px;
+  grid-column: 3 / 4;
+  grid-row: 1;
+  padding-top: 75px;
+  padding-right: 10px;
+  font-family: var(--font-family);
+  line-height: 18px; /* 100% */
+  display: flex;
+  justify-content: end;
+  align-items: start;
 }
 
 .header__theme-menu-list {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  
+  
+  
 }
 
 .header__theme-menu-button {
   color: var(--accent-color);
-  background-color: transparent;
-  border: none;
+  background: none;
   border: 1px solid transparent;
   cursor: pointer;
+  font-weight: 400;
+  text-transform: lowercase;
+  padding: 1.5px 13px;
+  line-height: 1;
+  font-size: var(--main-font-size);
+  
+  
 }
 
 .header__theme-menu-button_active {
@@ -55,53 +72,107 @@ body {
   border-color: var(--accent-color-transparent);
 } 
 
+.header__theme-menu-button:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+}
 
 
+/* Заголовок */
+.header__title {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  text-align: left;
+  font-size: var(--heading-font-size);
+  color: var(--header-title-color);
+  text-shadow: var(--header__shadow-color);
+  line-height: 82.5%;
+  font-weight: 700;
+  padding: 55px 10px 55px 10px;
+  
+  
+  
+  
+}
+
+.header__subtitle {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  text-align: center;
+  color: var(--highlight-text-color);
+  background-color: var(--title-decor);
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  margin: 0 10px 66px 10px;
+  line-height: 23.4px;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/* ЗНАЧОК ЗАПИСИ */
 .header__rec {
-  display: inline-flex;
-  align-items: center;
   position: absolute;
   top: 10px;
-  right: 19px;
+  right: calc(38px - (10px + 9px)); /*Ширина и отступы :after*/
   color: var(--accent-color);
 }
 
-/*кружок*/
-.header__rec::after { 
+.header__rec:after {
   content: "";
+  display: inline-block;
   width: 9px;
   height: 9px;
   margin-left: 10px;
   border-radius: 50%;
   background-color: var(--accent-color);
   box-shadow: 0px 0px 4px 2px #FF0070;
+  grid-area: none;
 }
 
-/*Уголок*/
-.header__rec::before { 
+
+/*УГОЛКИ*/
+
+.corner-top-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+}
+
+.corner-bottom-left {
+  grid-column: 1; 
+  grid-row: 3; 
+  justify-self: start; 
+  align-self: end;
+}
+
+.corner-top-right:before,
+.corner-bottom-left:after {
   content: "";
-  position: absolute;
-  border-top: 1px solid var(--accent-color); 
-  border-right: 1px solid var(--accent-color);
-  top: -3px;
-  right: -10px;
+  display: block;
+  border: 1px solid var(--accent-color);
   width: 25px;
   height: 25px;
 }
 
-.header__title {
-  font-size: var(--heading-font-size);
-  color: var(--header-title-color);
-  text-shadow: var(--shadow-color);
-  line-height: 1;
-  text-align: left;
-  line-height: 95.7px;
+.corner-top-right:before {
+  border-bottom: none;
+  border-left: none;
+  margin: 10px 10px 0 0;
 }
 
-.header__description {
-  color: var(--highlight-text-color);
-  background-color: var(--title-decor);
-  font-weight: 700;
-  
+.corner-bottom-left:after {
+  border-right: none;
+  border-top: none;
+  margin: 0 0 10px 10px;
 }
-

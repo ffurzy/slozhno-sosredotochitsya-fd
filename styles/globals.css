@@ -10,7 +10,13 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  background: var(--background-color);
+  overflow-x: hidden;
 }
+
+
 
 h1,
 h2,
@@ -25,7 +31,12 @@ p {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
 }
 
 picture {
