@@ -16,7 +16,8 @@
 
   /*Шрифты*/
   --font-family: 'IBM Plex mono', sans-serif;
-  --heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --heading-font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --heading-font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --main-font-size: 1.125rem;
 
   /*Отступы*/
