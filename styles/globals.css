@@ -7,14 +7,16 @@
 }
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-family, monospace);
+  font-size: var(--main-font-size);
   text-decoration: none;
   background: var(--background-color);
-  overflow-x: hidden;
-  height: 100%;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 main,
@@ -40,8 +42,8 @@ ul {
 }
 
 li {
-  list-style-type: none;
   text-decoration: none;
+  list-style-type: none;
 }
 
 picture {
