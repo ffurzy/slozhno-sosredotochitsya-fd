@@ -6,7 +6,7 @@
   /*Цвета*/
   --accent-color: #FF0070;
   --title-decor: #FF0070;
-  --button-hover: #FF007066; 
+  --button-hover: #FF007066;
   --button-color: #FF0070;
   --decorated-color: #FF0070;
   --background-color: #000028;
@@ -31,7 +31,3 @@
 
   --bg-image: url("../images/cover-image-dark.png");
 }
-
-    /**/
-   
-  
