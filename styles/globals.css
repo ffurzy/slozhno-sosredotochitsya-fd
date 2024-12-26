@@ -15,14 +15,13 @@ body {
   background: var(--background-color);
   overflow-x: hidden;
   height: 100%;
-  
 }
 
-.header, .main, .footer {
-  width: 100%; 
+main,
+.header,
+.footer {
+  width: 100%;
 }
-
-
 
 h1,
 h2,

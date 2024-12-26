@@ -48,7 +48,7 @@ body {
 .header__rec {
   position: absolute;
   top: 10px;
-  right: 19px; 
+  right: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,10 +387,6 @@ body {
 
 /*картинки*/
 
-.in__pictures__section {
-  gap: 10px;
-}
-
 .images {
   row-gap: 10px;
 }
@@ -404,6 +400,7 @@ body {
 
 .in__pictures__section {
   margin-block-end: 40px;
+  gap: 10px;
 }
 
 @media (min-width: 768px) {
