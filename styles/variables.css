@@ -4,30 +4,28 @@
 */
 :root {
   /*Цвета*/
-  --accent-color: #FF0070;
-  --title-decor: #FF0070;
-  --button-hover: #FF007066;
-  --button-color: #FF0070;
-  --decorated-color: #FF0070;
+  --accent-color: #ff0070;
+  --title-decor: #ff0070;
+  --button-hover: #ff007066;
+  --button-color: #ff0070;
+  --decorated-color: #ff0070;
   --background-color: #000028;
-  --text-color: #F1B2CE;
-  --heading-title-color: #DB00FF;
-  --body-title-color: #FF0070;
+  --text-color: #f1b2ce;
+  --heading-title-color: #db00ff;
+  --body-title-color: #ff0070;
   --highlight-text-color: #000028;
   --header__shadow-color: 4px 4px 0 var(--accent-color);
   --footer__shadow-color: 2px 2px 0 var(--accent-color);
 
   /*Шрифты*/
-  --font-family: 'IBM Plex mono';
-  --heading-font-size-mobile: clamp(7.25rem, 7.25rem + 0vw, 7.25rem);
-  --heading-font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --heading-font-size-desktop-wide: font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
-
+  --font-family: "IBM Plex mono";
+  --font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-size-desktop-wide: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
   --main-font-size: 1.125rem;
-  
+
   /*Отступы*/
   --gap: 10px;
   --padding: 10px;
-
   --bg-image: url("../images/cover-image-dark.png");
 }
