@@ -1,16 +1,10 @@
-/*main,
-.header,
-.footer {
-  width: 100%;
-}*/
-
 body {
   font-family: var(--font-family, monospace);
   font-size: var(--main-font-size);
 }
 
 .page {
-  background-color: var(--background-color);
+  background-color: var(--background-color-main);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -47,10 +41,6 @@ body {
   align-items: center;
   column-gap: 10px;
   color: var(--decorated-color);
-}
-
-.theme-light .header__rec {
-  display: none;
 }
 
 .header__rec:after {
@@ -160,7 +150,6 @@ body {
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   line-height: 130%;
-  background-color: var(--background-color);
 }
 
 .section,
@@ -238,7 +227,6 @@ body {
   height: 100vh;
   min-height: 668px;
   padding: var(--padding);
-  background-color: var(--background-color);
 }
 
 .footer__title {

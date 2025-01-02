@@ -14,7 +14,6 @@
   --button-hover: #ff007066;
   --button-color: #ff0070;
   --decorated-color: #ff0070;
-  --background-color: #000028;
   --text-color: #f1b2ce;
   --heading-title-color: #db00ff;
   --body-title-color: #ff0070;
@@ -22,6 +21,7 @@
   --header__shadow-color: 4px 4px 0 var(--accent-color);
   --footer__shadow-color: 2px 2px 0 var(--accent-color);
   --bg-image: url("../images/cover-image-dark.png");
+  --background-color-main: #000028;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +31,6 @@
     --button-hover: #ff007066;
     --button-color: #ff0070;
     --decorated-color: #ff0070;
-    --background-color: #000028;
     --text-color: #f1b2ce;
     --heading-title-color: #db00ff;
     --body-title-color: #ff0070;
@@ -39,5 +38,6 @@
     --header__shadow-color: 4px 4px 0 var(--accent-color);
     --footer__shadow-color: 2px 2px 0 var(--accent-color);
     --bg-image: url("../images/cover-image-dark.png");
+    --background-color-main: #000028;
   }
 }
